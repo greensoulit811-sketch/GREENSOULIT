@@ -128,7 +128,7 @@ const HeroSlider: React.FC = () => {
               <div className={`flex flex-col sm:flex-row gap-6 justify-center items-center transition-all duration-1000 delay-700 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
                 <Link
                   to="/services"
-                  className="group relative w-full sm:w-auto overflow-hidden bg-green-500 text-white px-14 py-3.5 lg:py-5 rounded-2xl font-black text-xl shadow-[0_20px_50px_-10px_rgba(34,197,94,0.3)] transition-all hover:-translate-y-1"
+                  className="group relative w-full sm:w-auto overflow-hidden bg-green-500 text-white px-6 sm:px-14 py-4 lg:py-5 rounded-2xl font-bold text-lg sm:text-xl shadow-[0_20px_50px_-10px_rgba(34,197,94,0.3)] transition-all hover:-translate-y-1"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <span className="relative z-10 flex items-center justify-center gap-3">
@@ -137,7 +137,7 @@ const HeroSlider: React.FC = () => {
                 </Link>
                 <Link
                   to="/contact"
-                  className="w-full sm:w-auto bg-white/5 backdrop-blur-md border border-white/10 text-white px-14 lg:py-5 py-3.5 rounded-2xl font-black text-xl hover:bg-white/10 transition-all flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto bg-white/5 backdrop-blur-md border border-white/10 text-white px-6 sm:px-14 py-4 lg:py-5 rounded-2xl font-bold text-lg sm:text-xl hover:bg-white/10 transition-all flex items-center justify-center gap-2 group"
                 >
                   Learn More <ArrowRight className="w-6 h-6 text-white/40 group-hover:translate-x-1 transition-transform" />
                 </Link>
