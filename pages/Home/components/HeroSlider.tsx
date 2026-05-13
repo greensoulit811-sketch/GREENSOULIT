@@ -106,21 +106,21 @@ const HeroSlider: React.FC = () => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                 </span>
-                <span className="text-green-400 font-black text-[10px] uppercase tracking-widest">New Release</span>
+                <span className="text-green-400 font-black text-sm lg:text-sm uppercase tracking-widest">New Release</span>
                 <div className="w-px h-3 bg-white/20"></div>
                 Explore {slide.title.split(' ')[0]} solutions
                 <ChevronRight className="w-4 h-4 text-white/40" />
               </div>
 
               {/* Title with Perspective and Split Color */}
-              <h2 className={`text-5xl sm:text-7xl lg:text-7xl font-black text-white mb-8 leading-[1.05] tracking-tighter max-w-6xl mx-auto transition-all duration-1000 delay-300 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+              <h2 className={`text-3xl sm:text-7xl lg:text-7xl font-black text-white mb-8 leading-[1.05] tracking-tighter max-w-6xl mx-auto transition-all duration-1000 delay-300 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
                 {slide.title.split(' ').map((word, i) => (
                   <span key={i} className={(word === '&' || i === 2 || i === 3) ? "text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-300" : ""}>{word} </span>
                 ))}
               </h2>
 
               {/* Subtitle with Delay */}
-              <p className={`text-xl sm:text-2xl text-white/60 font-medium max-w-3xl mx-auto mb-14 leading-relaxed transition-all duration-1000 delay-500 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+              <p className={`text-lg sm:text-2xl text-white/60 font-medium max-w-3xl mx-auto mb-14 leading-relaxed transition-all duration-1000 delay-500 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
                 {slide.subtitle}. We deliver high-impact results using data-driven strategies and creative innovation.
               </p>
 
@@ -128,7 +128,7 @@ const HeroSlider: React.FC = () => {
               <div className={`flex flex-col sm:flex-row gap-6 justify-center items-center transition-all duration-1000 delay-700 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
                 <Link
                   to="/services"
-                  className="group relative w-full sm:w-auto overflow-hidden bg-green-500 text-white px-14 py-5 rounded-2xl font-black text-xl shadow-[0_20px_50px_-10px_rgba(34,197,94,0.3)] transition-all hover:-translate-y-1"
+                  className="group relative w-full sm:w-auto overflow-hidden bg-green-500 text-white px-14 py-3.5 lg:py-5 rounded-2xl font-black text-xl shadow-[0_20px_50px_-10px_rgba(34,197,94,0.3)] transition-all hover:-translate-y-1"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <span className="relative z-10 flex items-center justify-center gap-3">
@@ -137,7 +137,7 @@ const HeroSlider: React.FC = () => {
                 </Link>
                 <Link
                   to="/contact"
-                  className="w-full sm:w-auto bg-white/5 backdrop-blur-md border border-white/10 text-white px-14 py-5 rounded-2xl font-black text-xl hover:bg-white/10 transition-all flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto bg-white/5 backdrop-blur-md border border-white/10 text-white px-14 py-3.5 lg:py-5 rounded-2xl font-black text-xl hover:bg-white/10 transition-all flex items-center justify-center gap-2"
                 >
                   Learn More <ArrowRight className="w-6 h-6 text-white/40 group-hover:translate-x-1 transition-transform" />
                 </Link>

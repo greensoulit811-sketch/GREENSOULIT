@@ -133,7 +133,7 @@ const Contact: React.FC = () => {
                     border: "group-hover:border-green-200"
                   }
                 ].map((item, idx) => (
-                  <div key={idx} className={`group relative p-8 bg-white/40 backdrop-blur-md border border-gray-100 rounded-[1.5rem] ${item.border} hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all duration-500 overflow-hidden`}>
+                  <div key={idx} className={`group relative p-8 bg-white/40 backdrop-blur-md border border-gray-100 rounded-[1.5rem] ${item.border} hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:border-green-300 transition-all duration-500 overflow-hidden`}>
                     {/* Hover Background Glow */}
                     <div className={`absolute -right-10 -top-10 w-32 h-32 ${item.bg} rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
                     
@@ -156,7 +156,7 @@ const Contact: React.FC = () => {
               <div className="pt-4 flex flex-col sm:flex-row gap-4">
                 <button 
                   onClick={openWhatsApp}
-                  className="group relative inline-flex items-center justify-center space-x-3 bg-[#25D366] hover:bg-[#20ba59] text-white px-8 py-5 rounded-xl font-bold transition-all hover:shadow-[0_20px_40px_-10px_rgba(37,211,102,0.4)] active:scale-95 overflow-hidden"
+                  className="group relative inline-flex items-center justify-center space-x-3 bg-[#25D366] hover:bg-[#20ba59] text-white px-8 py-3.5 rounded-xl font-bold transition-all hover:shadow-[0_20px_40px_-10px_rgba(37,211,102,0.4)] active:scale-95 overflow-hidden"
                 >
                   <MessageCircle className="w-6 h-6 animate-bounce" />
                   <span>Chat on WhatsApp</span>
@@ -195,11 +195,11 @@ const Contact: React.FC = () => {
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                          <label className="text-xs font-black text-gray-400 uppercase tracking-widest ml-1">First Name</label>
+                          <label className="text-xs font-black text-gray-600 uppercase tracking-widest ml-1">First Name</label>
                           <input
                             type="text"
                             name="firstName"
-                            placeholder="David"
+                            placeholder="First Name"
                             value={formData.firstName}
                             onChange={handleChange}
                             required
@@ -207,11 +207,11 @@ const Contact: React.FC = () => {
                           />
                         </div>
                         <div className="space-y-2">
-                          <label className="text-xs font-black text-gray-400 uppercase tracking-widest ml-1">Last Name</label>
+                          <label className="text-xs font-black text-gray-600 uppercase tracking-widest ml-1">Last Name</label>
                           <input
                             type="text"
                             name="lastName"
-                            placeholder="Andrew"
+                            placeholder="Last Name"
                             value={formData.lastName}
                             onChange={handleChange}
                             required
@@ -221,7 +221,7 @@ const Contact: React.FC = () => {
                       </div>
 
                       <div className="space-y-2">
-                        <label className="text-xs font-black text-gray-400 uppercase tracking-widest ml-1">Email ID</label>
+                        <label className="text-xs font-black text-gray-600 uppercase tracking-widest ml-1">Email ID</label>
                         <input
                           type="email"
                           name="email"
@@ -234,7 +234,7 @@ const Contact: React.FC = () => {
                       </div>
 
                       <div className="space-y-2">
-                        <label className="text-xs font-black text-gray-400 uppercase tracking-widest ml-1">Phone Number</label>
+                        <label className="text-xs font-black text-gray-600 uppercase tracking-widest ml-1">Phone Number</label>
                         <input
                           type="tel"
                           name="phone"
@@ -247,7 +247,7 @@ const Contact: React.FC = () => {
                       </div>
 
                       <div className="space-y-2">
-                        <label className="text-xs font-black text-gray-400 uppercase tracking-widest ml-1">Select Service</label>
+                        <label className="text-xs font-black text-gray-600 uppercase tracking-widest ml-1">Select Service</label>
                         <div className="relative group">
                           <select
                             name="service"
@@ -268,7 +268,7 @@ const Contact: React.FC = () => {
                       </div>
 
                       <div className="space-y-2">
-                        <label className="text-xs font-black text-gray-400 uppercase tracking-widest ml-1">Message</label>
+                        <label className="text-xs font-black text-gray-600 uppercase tracking-widest ml-1">Message</label>
                         <textarea
                           name="message"
                           placeholder="Tell us about your project or idea..."
@@ -294,7 +294,7 @@ const Contact: React.FC = () => {
                       <button
                         type="submit"
                         disabled={status === 'loading'}
-                        className="w-full group bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white py-5 rounded-2xl font-bold transition-all flex items-center justify-center space-x-3 disabled:opacity-50 shadow-2xl shadow-green-200"
+                        className="w-full group bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white py-3.5 rounded-2xl font-bold transition-all flex items-center justify-center space-x-3 disabled:opacity-50 shadow-2xl shadow-green-200"
                       >
                         {status === 'loading' ? (
                           <span className="flex items-center space-x-3">
