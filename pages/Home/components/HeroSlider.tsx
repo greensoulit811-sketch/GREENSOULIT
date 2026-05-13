@@ -106,7 +106,7 @@ const HeroSlider: React.FC = () => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                 </span>
-                <span className="text-green-400 font-black text-sm lg:text-sm uppercase tracking-widest">New Release</span>
+                <span className="text-green-400 font-black text-[10px] lg:text-sm uppercase tracking-widest">New Release</span>
                 <div className="w-px h-3 bg-white/20"></div>
                 Explore {slide.title.split(' ')[0]} solutions
                 <ChevronRight className="w-4 h-4 text-white/40" />
@@ -137,7 +137,7 @@ const HeroSlider: React.FC = () => {
                 </Link>
                 <Link
                   to="/contact"
-                  className="w-full sm:w-auto bg-white/5 backdrop-blur-md border border-white/10 text-white px-14 py-3.5 lg:py-5 rounded-2xl font-black text-xl hover:bg-white/10 transition-all flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto bg-white/5 backdrop-blur-md border border-white/10 text-white px-14 lg:py-5 py-3.5 rounded-2xl font-black text-xl hover:bg-white/10 transition-all flex items-center justify-center gap-2"
                 >
                   Learn More <ArrowRight className="w-6 h-6 text-white/40 group-hover:translate-x-1 transition-transform" />
                 </Link>
