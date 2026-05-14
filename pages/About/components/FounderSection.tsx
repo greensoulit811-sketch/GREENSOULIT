@@ -41,13 +41,13 @@ const FounderSection: React.FC = () => {
               </svg>
             </div>
 
-            <h4 className="text-green-600 font-black tracking-widest uppercase text-xs mb-6">Guiding Visionary</h4>
+            <h4 className="text-green-600 font-black tracking-widest uppercase text-xs mb-6">A Message From</h4>
             <h2 className="text-2xl sm:text-4xl font-black text-gray-900 mb-8 leading-tight">
-              A Message From Our Founder
+              Our Guiding Visionary
             </h2>
             
             <p className="text-xl lg:text-xl text-gray-600 leading-relaxed font-medium mb-10">
-              "We're building the future of digital experiences. Join us on this exciting journey as we push the boundaries of what's possible."
+              "MBA in Business Administration from Dhaka University. 10+ years experience leading tech startups and digital ventures."
             </p>
 
             <div className="flex items-center gap-4">

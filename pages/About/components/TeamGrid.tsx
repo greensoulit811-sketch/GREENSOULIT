@@ -69,7 +69,7 @@ const TeamGrid: React.FC<TeamGridProps> = ({ members }) => {
                 
                 {/* Short Bio (Hidden by default, shown on hover) */}
                 <p className="text-white/40 text-sm font-medium line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 mt-2">
-                   Loves solving complex problems and creating impact.
+                  {member.details}
                 </p>
               </div>
 
