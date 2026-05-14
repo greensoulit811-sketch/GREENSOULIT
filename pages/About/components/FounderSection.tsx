@@ -4,7 +4,7 @@ import founderImg from '@/components/image/founder.jpeg';
 
 const FounderSection: React.FC = () => {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex flex-col lg:flex-row bg-white rounded-[1.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-gray-100">
         

@@ -12,7 +12,7 @@ const TeamGrid: React.FC<TeamGridProps> = ({ members }) => {
   const visibleMembers = isExpanded ? members : members.slice(0, 10);
 
   return (
-    <section className="lg:py-24 py-10 bg-gray-50/30">
+    <section className="lg:py-18 py-8 bg-gray-50/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}

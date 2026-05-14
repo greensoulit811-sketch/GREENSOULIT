@@ -139,7 +139,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Core Values Section - New */}
-      <section className="py-24 bg-gray-50/50 border-y border-gray-100">
+      <section className="py-16 bg-gray-50/50 border-y border-gray-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-green-600 font-black tracking-[0.2em] uppercase text-xs mb-4">
@@ -197,22 +197,22 @@ const About: React.FC = () => {
 
       {/* Cinematic Our Team Banner */}
       <section className="container mx-auto px-4 py-14">
-        <div className="relative h-48 md:h-72 rounded-[1.5rem] overflow-hidden group shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)]">
-          <img 
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070" 
-            alt="Our Team" 
+        <div className="relative h-48 md:h-72 rounded-[1.5rem] overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070"
+            alt="Our Team"
             className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-[4000ms]"
           />
           {/* Multi-layered Overlay for Depth */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#1e3a8a]/90 via-[#4c1d95]/80 to-[#1e3a8a]/90"></div>
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
-          
+
           <div className="relative h-full flex items-center justify-center text-center">
             <div className="space-y-2">
-               <div className="w-12 h-1.5 bg-green-500 mx-auto rounded-full mb-4 animate-pulse"></div>
-               <h2 className="text-4xl md:text-7xl font-black text-white tracking-[0.2em] uppercase">
-                 Our Team
-               </h2>
+              <div className="w-12 h-1.5 bg-green-500 mx-auto rounded-full mb-4 animate-pulse"></div>
+              <h2 className="text-4xl md:text-7xl font-black text-white tracking-[0.2em] uppercase">
+                Our Team
+              </h2>
             </div>
           </div>
         </div>
