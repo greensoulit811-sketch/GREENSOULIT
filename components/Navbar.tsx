@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X, Home as HomeIcon, Info, Briefcase, Phone, ChevronRight, Globe, Rocket, Share2, Layout, ShieldCheck } from "lucide-react";
 import { fetchServices } from "../services/api"; 
 
 type Service = {
@@ -11,6 +11,7 @@ type Service = {
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState<'menu' | 'categories'>('menu');
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const [services, setServices] = useState<Service[]>([]);
@@ -120,7 +121,7 @@ const Navbar: React.FC = () => {
               </div>
             </div>
 
-            <NavLink to="/case-studies">Portfolio</NavLink>
+            <NavLink to="/case-studies">Casestudies</NavLink>
             <NavLink to="/invoice">Payment</NavLink>
             <NavLink to="/contact">Contact</NavLink>
           </div>
@@ -149,55 +150,77 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <div className={`md:hidden fixed inset-x-0 bg-white border-t transition-all duration-500 ease-in-out ${isOpen ? 'top-20 opacity-100 visible h-auto pb-10 shadow-2xl' : '-top-full opacity-0 invisible h-0'}`}>
-        <div className="px-6 pt-6 space-y-4">
-          {[
-            { name: "Home", path: "/" },
-            { name: "About", path: "/about" },
-            { name: "Portfolio", path: "/case-studies" },
-            { name: "Contact", path: "/contact" }
-          ].map((item, i) => (
-            <Link
-              key={i}
-              to={item.path}
-              onClick={() => setIsOpen(false)}
-              className={`block py-3 text-lg font-semibold tracking-tight ${isActive(item.path) ? 'text-green-600' : 'text-gray-800'}`}
-            >
-              {item.name}
-            </Link>
-          ))}
+      {/* Mobile Menu - Tabbed Premium Experience */}
+      <div className={`md:hidden fixed inset-x-0 top-20 bg-white border-t border-gray-100 z-[100] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] transition-all duration-500 ease-in-out ${isOpen ? 'translate-y-0 opacity-100 visible' : '-translate-y-full opacity-0 invisible'}`}>
+        
+        {/* Tab Switcher */}
+        <div className="flex border-b border-gray-100">
+          <button 
+            onClick={() => setActiveTab('menu')}
+            className={`flex-1 py-4 text-[12px] font-black uppercase tracking-widest transition-all ${activeTab === 'menu' ? 'text-green-600 border-b-2 border-green-600 bg-green-50/30' : 'text-gray-400'}`}
+          >
+            Menu
+          </button>
+          <button 
+            onClick={() => setActiveTab('categories')}
+            className={`flex-1 py-4 text-[12px] font-black uppercase tracking-widest transition-all ${activeTab === 'categories' ? 'text-green-600 border-b-2 border-green-600 bg-green-50/30' : 'text-gray-400'}`}
+          >
+            Services
+          </button>
+        </div>
 
-          {/* Mobile Services Section */}
-          <div className="border-t pt-4">
-            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">Our Services</p>
-            <div className="grid grid-cols-1 gap-2 max-h-64 overflow-y-auto pr-2">
+        <div className="px-4 py-4 space-y-8 overflow-y-auto max-h-[60vh] custom-scrollbar">
+          
+          {activeTab === 'menu' ? (
+            /* Main Menu List */
+            <nav className="flex flex-col gap-1">
+              {[
+                { name: "Home", path: "/" },
+                { name: "About Us", path: "/about" },
+                { name: "Casestudies", path: "/case-studies" },
+                { name: "Payment", path: "/invoice" },
+                { name: "Contact", path: "/contact" }
+              ].map((item, i) => (
+                <Link
+                  key={i}
+                  to={item.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`text-sm font-black tracking-tight flex items-center justify-between p-2 rounded-xl transition-all ${isActive(item.path) ? 'text-green-600 bg-green-50' : 'text-gray-900 hover:bg-gray-50'}`}
+                >
+                  {item.name}
+                  {isActive(item.path) && <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>}
+                </Link>
+              ))}
+            </nav>
+          ) : (
+            /* Services List - Line by Line (No Icons) */
+            <div className="flex flex-col">
               {services.map((service) => (
                 <button
                   key={service.id}
-                  onClick={() => {
-                    navigate(`/services/${service.slug}`);
-                    setIsOpen(false);
-                  }}
-                  className="w-full text-left px-4 py-3 text-sm font-semibold text-gray-600 hover:bg-green-50 hover:text-green-600 rounded-xl transition-colors"
+                  onClick={() => { navigate(`/services/${service.slug}`); setIsOpen(false); }}
+                  className="w-full flex items-center justify-between py-3 border-b border-gray-50 last:border-0 group active:bg-gray-50 px-2 transition-colors text-left"
                 >
-                  {service.title}
+                  <span className="text-[12px] font-bold text-gray-700 group-hover:text-green-600 transition-colors flex-grow pr-4 text-left">
+                    {service.title}
+                  </span>
+                  <ChevronRight className="w-4 h-4 text-gray-300 group-hover:text-green-500 group-hover:translate-x-1 transition-all flex-shrink-0" />
                 </button>
               ))}
             </div>
-          </div>
+          )}
 
-          <div className="pt-6 border-t">
+          {/* Bottom Action Section */}
+          <div className="pt-4 border-t border-gray-100">
             <Link 
               to="/contact" 
               onClick={() => setIsOpen(false)}
-              className="relative inline-block w-full p-0.5 rounded-full overflow-hidden button-wrapper"
+              className="block w-full bg-gray-950 text-white text-center py-4 rounded-2xl font-black text-sm shadow-xl transition-all active:scale-[0.98]"
             >
-              <button className="relative z-10 w-full bg-gray-900 text-white rounded-full py-3 font-medium text-sm">
-                Start Your Project
-              </button>
+              Start Your Project
             </Link>
           </div>
+
         </div>
       </div>
     </nav>
