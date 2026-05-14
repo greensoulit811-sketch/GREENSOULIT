@@ -57,7 +57,7 @@ const PaymentCard: React.FC<{ method: PaymentMethod }> = ({ method }) => {
   };
 
   return (
-    <div className="group relative bg-white rounded-[1.5rem] p-6 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.1)] border border-gray-100 hover:border-green-300 transition-all duration-500 hover:-translate-y-2">
+    <div className="group relative bg-white rounded-[1.5rem] p-4 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.1)] border border-gray-100 hover:border-green-300 transition-all duration-500 hover:-translate-y-2">
       {/* Top Banner Accent */}
       <div className={`absolute top-0 left-0 right-0 h-2 ${method.color} opacity-20 group-hover:opacity-100 transition-opacity rounded-t-[2rem]`}></div>
 
@@ -157,32 +157,32 @@ const PaymentInvoice: React.FC = () => {
         </div>
 
         {/* Security & Support Footer */}
-        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 pt-12 border-t border-gray-200">
-           <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-4 md:gap-16 pt-12 border-t border-gray-200 w-full">
+           <div className="flex items-center gap-4 justify-center md:justify-start">
+              <div className="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center flex-shrink-0">
                  <ShieldCheck className="w-6 h-6 text-green-500" />
               </div>
-              <div>
-                <p className="text-sm font-black text-gray-900 uppercase">100% Secure</p>
-                <p className="text-xs text-gray-500">Encrypted Transactions</p>
+              <div className="text-left">
+                <p className="text-[10px] md:text-sm font-black text-gray-900 uppercase">100% Secure</p>
+                <p className="text-[9px] md:text-xs text-gray-500">Encrypted</p>
               </div>
            </div>
-           <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center">
+           <div className="flex items-center gap-4 justify-center md:justify-start">
+              <div className="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center flex-shrink-0">
                  <Banknote className="w-6 h-6 text-blue-500" />
               </div>
-              <div>
-                <p className="text-sm font-black text-gray-900 uppercase">Easy Refund</p>
-                <p className="text-xs text-gray-500">7-Day Policy</p>
+              <div className="text-left">
+                <p className="text-[10px] md:text-sm font-black text-gray-900 uppercase">Easy Refund</p>
+                <p className="text-[9px] md:text-xs text-gray-500">7-Day Policy</p>
               </div>
            </div>
-           <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center">
+           <div className="col-span-2 md:col-span-1 flex items-center gap-4 justify-center md:justify-start">
+              <div className="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center flex-shrink-0">
                  <Smartphone className="w-6 h-6 text-purple-500" />
               </div>
-              <div>
-                <p className="text-sm font-black text-gray-900 uppercase">24/7 Support</p>
-                <p className="text-xs text-gray-500">Live Assistance</p>
+              <div className="text-left">
+                <p className="text-[10px] md:text-sm font-black text-gray-900 uppercase">24/7 Support</p>
+                <p className="text-[9px] md:text-xs text-gray-500">Live Assistance</p>
               </div>
            </div>
         </div>
