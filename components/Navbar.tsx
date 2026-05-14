@@ -71,11 +71,11 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center group">
             <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
+              <div className="absolute -inset-1"></div>
               <img
                 src="https://i.ibb.co/CsWG4pPh/Whats-App-Image-2026-01-27-at-6-26-53-PM.jpg"
                 alt="Logo"
-                className="relative h-12 w-auto rounded-lg shadow-sm"
+                className="relative h-12 w-auto rounded-lg"
               />
             </div>
             <span className="ml-3 text-lg font-bold text-gray-800 hidden lg:block tracking-tight">
@@ -90,7 +90,7 @@ const Navbar: React.FC = () => {
 
             {/* Services Dropdown */}
             <div className="relative group">
-              <div className={`flex items-center gap-1 cursor-pointer py-1 text-[13px] font-semibold tracking-[0.05em] transition-all duration-300 ${
+              <div className={`flex items-center gap-1 cursor-pointer py-1 text-[16px] font-semibold tracking-[0.05em] transition-all duration-300 ${
                 pathname.startsWith('/services') ? 'text-green-600' : 'text-gray-600 hover:text-gray-900'
               }`}>
                 <Link to="/services" className="!mr-0">Services</Link>
@@ -142,7 +142,7 @@ const Navbar: React.FC = () => {
           <div className="md:hidden flex items-center">
             <button 
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-gray-600 hover:text-green-600 transition-colors"
+              className="p-0.5 text-gray-600 hover:text-green-600 transition-colors"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>

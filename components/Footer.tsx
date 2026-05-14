@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Linkedin, Send } from "lucide-react";
-import { fetchServices } from "../services/api"; // ⚠️ path ঠিক করো
+import { fetchServices } from "../services/api";
 
 type Service = {
   id: string;
@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
     const loadServices = async () => {
       try {
         const data = await fetchServices();
-        setServices(data.slice(0, 5)); // ✅ শুধু ৫টা দেখাবে
+        setServices(data.slice(0, 5));
       } catch (error) {
         console.error("Failed to load services");
       }
@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
               <img
                 src="https://i.ibb.co/CsWG4pPh/Whats-App-Image-2026-01-27-at-6-26-53-PM.jpg"
                 alt="Green Soul IT Logo"
-                className="h-24 w-auto"
+                className="h-20 w-auto"
               />
             </Link>
 
