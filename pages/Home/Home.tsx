@@ -53,7 +53,7 @@ const Home: React.FC = () => {
       <WhyWorkWithUs />
 
       {/* Ultimate Testimonials Spotlight */}
-      <section className="py-32 bg-white relative overflow-hidden">
+      <section className="py-12 lg:py-32 bg-white relative overflow-hidden">
         {/* Abstract Background Decoration */}
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-green-50/30 rounded-full blur-[150px] -mr-96 -mt-96 animate-pulse"></div>
@@ -73,7 +73,7 @@ const Home: React.FC = () => {
                   Testimonials
                 </span>
               </div>
-              <h3 className="text-4xl lg:text-5xl font-black text-gray-900 leading-[1.1]">
+              <h3 className="text-xl lg:text-5xl font-black text-gray-900 leading-[1.1]">
                 Real Results for <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-500">
                   Real Companies.
@@ -82,14 +82,14 @@ const Home: React.FC = () => {
             </div>
             <div className="flex items-center space-x-12">
               <div className="text-center">
-                <p className="text-4xl font-black text-gray-900">500+</p>
+                <p className="text-xl font-black text-gray-900">500+</p>
                 <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mt-2">
                   Projects Done
                 </p>
               </div>
               <div className="w-px h-12 bg-gray-100"></div>
               <div className="text-center">
-                <p className="text-4xl font-black text-green-500">99%</p>
+                <p className="text-xl font-black text-green-500">99%</p>
                 <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mt-2">
                   Satisfaction
                 </p>
@@ -98,10 +98,10 @@ const Home: React.FC = () => {
           </div>
 
           {/* Spotlight Container */}
-          <div className="relative bg-[#0f172a] rounded-[1.5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] min-h-[600px]">
+          <div className="relative bg-[#0f172a] rounded-[1.5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] min-h-[550px] lg:min-h-[600px]">
             {/* Ambient Background for the inner card */}
-            <div className="absolute inset-0 opacity-20">
-              <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#22c55e_0%,transparent_50%)]"></div>
+            <div className="absolute inset-0 opacity-30">
+              <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#22c55e_20%,transparent_70%)]"></div>
             </div>
 
             {testimonials.map((t, idx) => (
@@ -114,56 +114,56 @@ const Home: React.FC = () => {
                 }`}
               >
                 {/* Left Side: Visual / Image */}
-                <div className="lg:w-1/2 relative h-[300px] lg:h-auto overflow-hidden">
+                <div className="lg:w-1/2 relative h-[250px] sm:h-[300px] lg:h-auto overflow-hidden">
                   <img
                     src={t.photo}
                     alt={t.name}
-                    className="absolute inset-0 w-full h-full object-cover grayscale-[20%] contrast-125"
+                    className="absolute inset-0 w-full h-full object-cover grayscale-[10%] contrast-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/40 to-transparent lg:bg-gradient-to-r"></div>
 
-                  {/* Floating Metric Card */}
-                  <div className="absolute bottom-10 left-10 right-10 bg-white/10 backdrop-blur-xl border border-white/20 p-6 rounded-3xl">
+                  {/* Floating Metric Card - Hidden or minimized on small mobile if needed, but let's keep it styled better */}
+                  <div className="absolute bottom-6 left-6 right-6 lg:bottom-10 lg:left-10 lg:right-10 bg-white/5 backdrop-blur-2xl border border-white/10 p-5 lg:p-6 rounded-[2rem] shadow-2xl">
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="text-green-400 text-xs font-black uppercase tracking-widest mb-1">
+                        <p className="text-green-400 text-[10px] lg:text-xs font-black uppercase tracking-widest mb-1">
                           Impact Delivered
                         </p>
-                        <p className="text-2xl font-bold text-white">
+                        <p className="text-xl lg:text-2xl font-bold text-white">
                           {t.metric || "Significant Growth"}
                         </p>
                       </div>
-                      <div className="w-12 h-12 bg-green-500 rounded-2xl flex items-center justify-center">
-                        <Star className="w-6 h-6 text-white fill-white" />
+                      <div className="w-10 h-10 lg:w-12 lg:h-12 bg-green-500 rounded-2xl flex items-center justify-center shadow-lg shadow-green-500/20">
+                        <Star className="w-5 h-5 lg:w-6 lg:h-6 text-white fill-white" />
                       </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Right Side: Content */}
-                <div className="lg:w-1/2 p-12 md:p-20 flex flex-col justify-center relative">
-                  <Quote className="absolute top-10 right-10 w-24 h-24 text-white/5" />
+                <div className="lg:w-1/2 p-8 sm:p-12 lg:p-20 flex flex-col justify-center relative text-center lg:text-left">
+                  <Quote className="absolute top-6 right-6 lg:top-10 lg:right-10 w-16 h-16 lg:w-24 lg:h-24 text-white/5" />
 
-                  <div className="flex space-x-1 mb-10">
+                  <div className="flex justify-center lg:justify-start space-x-1 mb-6 lg:mb-10">
                     {[1, 2, 3, 4, 5].map((s) => (
                       <Star
                         key={s}
-                        className={`w-5 h-5 ${s <= (t.rating || 5) ? "fill-green-500 text-green-500" : "text-white/20"}`}
+                        className={`w-4 h-4 lg:w-5 lg:h-5 ${s <= (t.rating || 5) ? "fill-green-500 text-green-500" : "text-white/20"}`}
                       />
                     ))}
                   </div>
 
-                  <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-white mb-12 leading-tight">
+                  <p className="text-xl sm:text-2xl lg:text-4xl font-medium text-white mb-8 lg:mb-12 leading-tight italic opacity-90">
                     "{t.feedback}"
                   </p>
 
-                  <div className="flex items-center space-x-6">
-                    <div className="w-16 h-px bg-green-500"></div>
+                  <div className="flex flex-col lg:flex-row items-center lg:space-x-6 gap-4">
+                    <div className="hidden lg:block w-16 h-px bg-green-500"></div>
                     <div>
-                      <h5 className="text-2xl font-black text-white leading-none mb-2">
+                      <h5 className="text-xl lg:text-2xl font-black text-white leading-none mb-2">
                         {t.name}
                       </h5>
-                      <p className="text-green-500 font-bold text-sm uppercase tracking-widest">
+                      <p className="text-green-500 font-bold text-xs lg:text-sm uppercase tracking-[0.2em]">
                         {t.company}
                       </p>
                     </div>
@@ -172,8 +172,8 @@ const Home: React.FC = () => {
               </div>
             ))}
 
-            {/* Navigation Overlays */}
-            <div className="absolute bottom-10 right-10 flex items-center space-x-4 z-20">
+            {/* Navigation Overlays - Repositioned for mobile */}
+            <div className="absolute bottom-6 left-0 right-0 lg:left-auto lg:right-10 lg:bottom-10 flex items-center justify-center lg:justify-end space-x-4 z-20">
               <button
                 onClick={() =>
                   setActiveTestimonial(
@@ -181,9 +181,9 @@ const Home: React.FC = () => {
                       (prev - 1 + testimonials.length) % testimonials.length,
                   )
                 }
-                className="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-green-500 hover:border-green-500 transition-all group"
+                className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-green-500 hover:border-green-500 transition-all group backdrop-blur-md"
               >
-                <ArrowRight className="w-6 h-6 rotate-180 group-hover:-translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 lg:w-6 lg:h-6 rotate-180 group-hover:-translate-x-1 transition-transform" />
               </button>
               <button
                 onClick={() =>
@@ -191,22 +191,22 @@ const Home: React.FC = () => {
                     (prev) => (prev + 1) % testimonials.length,
                   )
                 }
-                className="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-green-500 hover:border-green-500 transition-all group"
+                className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-green-500 hover:border-green-500 transition-all group backdrop-blur-md"
               >
-                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 lg:w-6 lg:h-6 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
 
-            {/* Progress Dots inside the dark card */}
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 lg:left-auto lg:right-[180px] flex space-x-2 z-20">
+            {/* Progress Dots inside the dark card - Repositioned for mobile */}
+            <div className="absolute bottom-20 left-1/2 -translate-x-1/2 lg:bottom-10 lg:left-auto lg:right-[180px] lg:translate-x-0 flex space-x-2 z-20">
               {testimonials.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setActiveTestimonial(idx)}
                   className={`h-1 rounded-full transition-all duration-500 ${
                     idx === activeTestimonial
-                      ? "bg-green-500 w-12"
-                      : "bg-white/20 w-4 hover:bg-white/40"
+                      ? "bg-green-500 w-8 lg:w-12"
+                      : "bg-white/20 w-3 lg:w-4 hover:bg-white/40"
                   }`}
                 />
               ))}

@@ -12,12 +12,12 @@ const TeamGrid: React.FC<TeamGridProps> = ({ members }) => {
   const visibleMembers = isExpanded ? members : members.slice(0, 10);
 
   return (
-    <section className="py-24 bg-gray-50/30">
+    <section className="lg:py-24 py-10 bg-gray-50/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
         <div className="text-center mb-16 max-w-6xl mx-auto">
-          <h2 className="text-5xl md:text-6xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight">
+          <h2 className="text-2xl md:text-6xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight">
             Meet Our Innovation at <span className="text-green-600">Green Soul IT</span> Family
           </h2>
           <p className="text-gray-500 text-lg font-medium">

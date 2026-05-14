@@ -140,7 +140,7 @@ const HeroSlider: React.FC = () => {
               </p>
 
               {/* Buttons with Staggered Entry */}
-              <div className={`flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full px- sm:px-0 transition-all duration-1000 delay-700 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+              <div className={`flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full px-1.5 sm:px-0 transition-all duration-1000 delay-700 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
                 <Link
                   to="/services"
                   className="group relative w-full sm:w-auto p-0.5 rounded-xl sm:rounded-2xl overflow-hidden hero-button-wrapper transition-all hover:-translate-y-1 shadow-[0_20px_50px_-10px_rgba(34,197,94,0.3)]"

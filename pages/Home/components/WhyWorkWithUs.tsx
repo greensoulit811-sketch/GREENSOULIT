@@ -60,10 +60,10 @@ const WhyWorkWithUs: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">
           <p className="text-sm font-bold text-green-600 uppercase tracking-widest mb-4">Our Strengths</p>
-          <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-8">
+          <h2 className="text-xl lg:text-5xl font-black text-gray-900 mb-8">
             Why <span className="text-green-500">Work</span> with Us
           </h2>
-          <p className="text-gray-500 max-w-4xl mx-auto text-lg font-medium leading-relaxed">
+          <p className="text-gray-500 max-w-4xl mx-auto text- font-medium leading-relaxed">
             Work with us for expert, innovative, reliable, and customized software solutions, backed by efficient support, top-quality security, collaborative efforts, and agile methodologies
           </p>
         </div>
@@ -75,9 +75,9 @@ const WhyWorkWithUs: React.FC = () => {
             {[...strengths, ...strengths].map((item, index) => (
               <div 
                 key={index} 
-                className="flex-shrink-0 w-[412px] pr-8"
+                className="flex-shrink-0 w-[412px] pr-6"
               >
-                <div className="bg-white/80 backdrop-blur-sm rounded-[2rem] p-10 border border-white/50 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.05)] hover:shadow-2xl transition-all duration-500 group h-full">
+                <div className="bg-white/80 backdrop-blur-sm rounded-[1.5rem] p-10 border border-white/50 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.05)] hover:shadow-2xl transition-all duration-500 group h-full">
                   <div className={`w-20 h-20 ${item.bgColor} rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500`}>
                     <item.icon className={`w-10 h-10 ${item.color}`} strokeWidth={1.5} />
                   </div>

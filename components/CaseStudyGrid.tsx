@@ -9,7 +9,7 @@ interface CaseStudyGridProps {
 
 const CaseStudyGrid: React.FC<CaseStudyGridProps> = ({ caseStudies }) => {
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-14 lg:py-24 bg-white relative overflow-hidden">
       {/* Background Subtle Elements */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-[0.03]">
         <div className="absolute top-1/4 left-10 w-96 h-96 bg-green-500 rounded-full blur-[120px]"></div>
@@ -24,28 +24,28 @@ const CaseStudyGrid: React.FC<CaseStudyGridProps> = ({ caseStudies }) => {
               <div className="h-px w-10 bg-green-500"></div>
               <span className="text-green-600 text-xs font-black uppercase tracking-[0.4em]">Our Impact</span>
             </div>
-            <h2 className="text-5xl md:text-6xl lg:text-5xl font-black text-gray-900 leading-tight">
+            <h2 className="text-xl md:text-6xl lg:text-5xl font-black text-gray-900 leading-tight sm:text-center lg:text-left">
               Real Results, <br />
               <span className="text-green-600">Exceptional</span> Stories
             </h2>
           </div>
           <div className="pb-2">
-            <Link to="/case-studies" className="group inline-flex items-center gap-3 text-gray-900 font-black text-sm uppercase tracking-widest hover:text-green-600 transition-colors">
+            <Link to="/case-studies" className="group inline-flex items-center gap-3 text-gray-900 font-black lg:text-sm text-xs uppercase tracking-widest hover:text-green-600 transition-colors">
               See more projects
-              <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center group-hover:border-green-500 group-hover:bg-green-500 group-hover:text-white transition-all duration-300">
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <div className="w-8 h-8 text-center rounded-full border border-gray-200 flex items-center justify-center group-hover:border-green-500 group-hover:bg-green-500 group-hover:text-white transition-all duration-300">
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>
           </div>
         </div>
 
         {/* Grid for Case Studies */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 gap-6">
           {caseStudies.slice(0, 3).map((study) => (
             <Link 
               key={study.id} 
               to={`/case-studies/${study.id}`}
-              className="group relative h-[500px] rounded-[1.5rem] overflow-hidden bg-gray-900 flex flex-col justify-end p-8 transition-all duration-700 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.3)]"
+              className="group relative h-[350px] lg:h-[500px] rounded-[1.5rem] overflow-hidden bg-gray-900 flex flex-col justify-end p-8 transition-all duration-700 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.3)]"
             >
               {/* Background Image with Gradient Overlay */}
               <div className="absolute inset-0">

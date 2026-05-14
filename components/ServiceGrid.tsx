@@ -75,20 +75,20 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ services }) => {
   };
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="lg:py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center mb-24 relative">
+        <div className="text-center mb-12 lg:mb-24 relative">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-green-100/50 blur-[100px] -z-10"></div>
-          <p className="text-sm font-bold text-green-500 uppercase tracking-[0.3em] mb-6">Innovative Solutions</p>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 leading-[1.1] tracking-tight">
+          <p className="text-[12px] md:text-[12px] lg:text-[16px] font-bold text-green-500 uppercase tracking-[0.3em] mb-6">Innovative Solutions</p>
+          <h2 className="text-2xl md:text-6xl lg:text-6xl font-black text-gray-900 leading-[1.1] tracking-tight">
             Our  <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-400">Services</span>
           </h2>
         </div>
 
         {/* The 5-Card Grid - Purely Typography Driven */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-5 lg:gap-10">
           
           {displayServices.map((service, index) => {
             const isWide = index === 0;
@@ -98,7 +98,7 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ services }) => {
             return (
               <div 
                 key={service.id}
-                className={`${colSpan} min-h-[400px] ${style.bg} rounded-[1.5rem] p-10 md:p-14 relative group overflow-hidden transition-all duration-700 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] ${style.hover} border border-white/50 flex flex-col justify-between`}
+                className={`${colSpan} min-h-[40px] ${style.bg} rounded-[1.5rem] p-6 md:p-14 relative group overflow-hidden transition-all duration-700 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] ${style.hover} border border-white/50 flex flex-col justify-between`}
               >
                 {/* Decorative Background Elements */}
                 <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-white/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
@@ -114,17 +114,17 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ services }) => {
                     {/* Tiny Accent Bar */}
                     <div className={`w-12 h-1.5 ${style.accent} rounded-full mb-8 transform origin-left group-hover:scale-x-150 transition-transform duration-700`}></div>
                     
-                    <h3 className={`${isWide ? 'text-4xl md:text-5xl' : 'text-3xl'} font-black mb-6 leading-[1.1] text-gray-900 tracking-tight`}>
+                    <h3 className={`${isWide ? 'text-xl md:text-5xl' : 'text-xl'} font-black mb-6 leading-[1.1] text-gray-900 tracking-tight`}>
                       {renderTitle(service.title, index)}
                     </h3>
                     
-                    <p className="text-gray-500 font-medium mb-10 max-w-xs text-lg leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity line-clamp-4">
+                    <p className="text-gray-500 font-medium mb-10 max-w-xs leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity line-clamp-4">
                       {service.description}
                     </p>
                     
                     <Link 
                       to={`/services/${service.slug}`} 
-                      className="inline-flex items-center gap-3 font-bold text-gray-900 group/link transition-all text-lg"
+                      className="inline-flex items-center gap-3 font-bold text-gray-900 group/link transition-all"
                     >
                       <span className="relative">
                         Learn More

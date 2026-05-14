@@ -42,7 +42,7 @@ const FounderSection: React.FC = () => {
             </div>
 
             <h4 className="text-green-600 font-black tracking-widest uppercase text-xs mb-6">Guiding Visionary</h4>
-            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-8 leading-tight">
+            <h2 className="text-2xl sm:text-4xl font-black text-gray-900 mb-8 leading-tight">
               A Message From Our Founder
             </h2>
             

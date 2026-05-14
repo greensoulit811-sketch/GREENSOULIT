@@ -9,7 +9,7 @@ export default function ImageCollection() {
   ];
 
   return (
-    <div className="flex w-full">
+    <div className="flex w-full mt-12 lg:mt-0">
       {images.map((url, index) => (
         <div key={index} className="w-1/4">
           <img

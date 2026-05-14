@@ -24,7 +24,7 @@ const About: React.FC = () => {
   return (
     <div className="pb-24">
       {/* Our Story */}
-      <section className="py-24 bg-white relative overflow-hidden">
+      <section className="lg:py-24 py-8 bg-white relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 right-0 w-1/3 h-full bg-green-50/30 -z-10 skew-x-[-12deg] translate-x-20"></div>
         <div className="absolute top-40 left-10 w-24 h-24 bg-green-200/20 rounded-full blur-2xl animate-pulse"></div>
@@ -38,7 +38,7 @@ const About: React.FC = () => {
                 Our Journey
               </div>
 
-              <h2 className="text-4xl sm:text-6xl font-black text-gray-900 mb-8 leading-[1.1] tracking-tight">
+              <h2 className="text-2xl sm:text-6xl font-black text-gray-900 mb-8 leading-[1.1] tracking-tight">
                 Crafting Digital <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-500">
                   Success Stories
@@ -145,12 +145,12 @@ const About: React.FC = () => {
             <h2 className="text-green-600 font-black tracking-[0.2em] uppercase text-xs mb-4">
               Our DNA
             </h2>
-            <h3 className="text-5xl md:text-6xl lg:text-5xl font-black text-gray-900">
+            <h3 className="text-xl md:text-6xl lg:text-5xl font-black text-gray-900">
               What Drives Us <span className="text-green-600">Forward</span>
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
                 title: "Data Driven",
