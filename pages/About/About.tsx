@@ -101,7 +101,7 @@ const About: React.FC = () => {
 
             {/* Image Side - Creative Stack */}
             <div className="order-1 lg:order-2 relative animate-in fade-in slide-in-from-right-10 duration-1000">
-              <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] group">
+              <div className="relative z-10 rounded-[1.5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] group">
                 <img
                   src="https://socialprisma.com/public/storage/service/20241125122400.webp"
                   alt="Team Collaboration"
@@ -116,7 +116,7 @@ const About: React.FC = () => {
 
               {/* Floating Experience Badge */}
               <div
-                className="absolute -bottom-6 -left-6 bg-white p-6 rounded-3xl shadow-2xl z-20 animate-bounce"
+                className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-2xl z-20 animate-bounce"
                 style={{ animationDuration: "4s" }}
               >
                 <div className="flex items-center gap-4">

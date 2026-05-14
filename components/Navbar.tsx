@@ -144,7 +144,7 @@ const Navbar: React.FC = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 text-gray-600 hover:text-green-600 transition-colors"
             >
-              {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -173,7 +173,7 @@ const Navbar: React.FC = () => {
           
           {activeTab === 'menu' ? (
             /* Main Menu List */
-            <nav className="flex flex-col gap-1">
+            <nav className="flex flex-col gap-2">
               {[
                 { name: "Home", path: "/" },
                 { name: "About Us", path: "/about" },
