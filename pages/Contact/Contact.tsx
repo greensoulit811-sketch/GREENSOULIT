@@ -66,28 +66,21 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="bg-white font-plus-jakarta selection:bg-green-100 selection:text-green-900 overflow-x-hidden">
-      {/* Cinematic Dark Hero Section */}
-      <section className="bg-[#030712] pt-24 pb-20 text-center relative overflow-hidden">
-        {/* Animated Background Elements */}
-        <div
-          className="absolute inset-0 z-0 opacity-20"
-          style={{
-            backgroundImage: `radial-gradient(#22c55e 0.5px, transparent 0.5px)`,
-            backgroundSize: "24px 24px",
-          }}
-        ></div>
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-green-500/10 rounded-full blur-[120px] -mr-64 -mt-64 animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-emerald-500/5 rounded-full blur-[100px] -ml-32 -mb-32"></div>
-
+    <div className="bg-white font-plus-jakarta selection:bg-green-100 selection:text-green-900 overflow-x-hidden relative min-h-screen">
+      {/* Integrated Cinematic Hero - Matching Payment Color */}
+      <section className="bg-[#0f172a] pt-24 pb-20 text-center relative overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#22c55e_0%,transparent_70%)] opacity-20"></div>
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `radial-gradient(#22c55e 1px, transparent 1px)`, backgroundSize: '40px 40px' }}></div>
+        
         <div className="container mx-auto px-4 relative z-10">
-          <h1 className="text-3xl md:text-6xl lg:text-5xl font-black text-white mb-6 leading-[1.1] tracking-tight animate-in fade-in slide-in-from-bottom-4 duration-1000">
+          <h1 className="text-4xl md:text-6xl lg:text-5xl font-black text-white mb-6 leading-[1.1] tracking-tight animate-in fade-in slide-in-from-bottom-4 duration-1000">
             Get in
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500 ml-3">
               Touch.
             </span>
           </h1>
-          <p className="text-center text-white">
+          <p className="text-center text-gray-400 max-w-2xl mx-auto font-medium">
             Connect with us to discuss your project requirements, ask questions,
             or learn more about how we can support your business growth.
           </p>
