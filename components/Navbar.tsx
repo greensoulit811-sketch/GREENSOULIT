@@ -177,6 +177,7 @@ const Navbar: React.FC = () => {
               {[
                 { name: "Home", path: "/" },
                 { name: "About Us", path: "/about" },
+                { name: "Services", path: "/services" },
                 { name: "Casestudies", path: "/case-studies" },
                 { name: "Payment", path: "/invoice" },
                 { name: "Contact", path: "/contact" }
@@ -195,18 +196,32 @@ const Navbar: React.FC = () => {
           ) : (
             /* Services List - Line by Line (No Icons) */
             <div className="flex flex-col">
-              {services.map((service) => (
-                <button
-                  key={service.id}
-                  onClick={() => { navigate(`/services/${service.slug}`); setIsOpen(false); }}
-                  className="w-full flex items-center justify-between py-3 border-b border-gray-50 last:border-0 group active:bg-gray-50 px-2 transition-colors text-left"
-                >
-                  <span className="text-[12px] font-bold text-gray-700 group-hover:text-green-600 transition-colors flex-grow pr-4 text-left">
-                    {service.title}
-                  </span>
-                  <ChevronRight className="w-4 h-4 text-gray-300 group-hover:text-green-500 group-hover:translate-x-1 transition-all flex-shrink-0" />
-                </button>
-              ))}
+              <button
+                onClick={() => { navigate('/services'); setIsOpen(false); }}
+                className="w-full flex items-center justify-between py-3 border-b border-gray-100 group active:bg-gray-50 px-2 transition-colors text-left"
+              >
+                <span className="text-[12px] font-black text-green-600 group-hover:text-green-700 transition-colors flex-grow pr-4 text-left uppercase tracking-wider">
+                  View All Services
+                </span>
+                <ChevronRight className="w-4 h-4 text-green-500 group-hover:translate-x-1 transition-all flex-shrink-0" />
+              </button>
+
+              {services.length === 0 ? (
+                <div className="px-6 py-4 text-sm text-gray-500">No services found</div>
+              ) : (
+                services.map((service) => (
+                  <button
+                    key={service.id}
+                    onClick={() => { navigate(`/services/${service.slug}`); setIsOpen(false); }}
+                    className="w-full flex items-center justify-between py-3 border-b border-gray-50 last:border-0 group active:bg-gray-50 px-2 transition-colors text-left"
+                  >
+                    <span className="text-[12px] font-bold text-gray-700 group-hover:text-green-600 transition-colors flex-grow pr-4 text-left">
+                      {service.title}
+                    </span>
+                    <ChevronRight className="w-4 h-4 text-gray-300 group-hover:text-green-500 group-hover:translate-x-1 transition-all flex-shrink-0" />
+                  </button>
+                ))
+              )}
             </div>
           )}
 
