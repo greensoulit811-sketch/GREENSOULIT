@@ -123,14 +123,14 @@ const Services: React.FC = () => {
       </section>
 
       {/* Modern Filter Tabs */}
-      <section className="sticky top-20 z-40 bg-white/80 backdrop-blur-xl border-b border-gray-100">
-        <div className="container mx-auto px-4 py-4">
+      <section className="sticky top-20 z-40 bg-gray-200 backdrop-blur-xl border-b border-gray-100">
+        <div className="container mx-auto px-4 py-6">
           <div className="flex flex-wrap items-center justify-center gap-3">
             {categories.map((cat, i) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-8 py-3 rounded-2xl text-xs font-black uppercase tracking-widest transition-all duration-500 ${
+                className={`px-8 py-3 rounded-xl text-xs font-black uppercase tracking-widest transition-all duration-500 ${
                   selectedCategory === cat
                     ? "bg-green-600 text-white shadow-[0_10px_25px_-5px_rgba(34,197,94,0.4)] scale-105 active:scale-95"
                     : "bg-gray-50 text-gray-500 hover:bg-gray-100 hover:text-gray-900 border border-transparent hover:border-gray-200"
@@ -144,7 +144,7 @@ const Services: React.FC = () => {
       </section>
 
       {/* Premium Service Grid */}
-      <section className="py-28 bg-gray-50/50">
+      <section className="py-16 bg-gray-50/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {filteredServices.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
