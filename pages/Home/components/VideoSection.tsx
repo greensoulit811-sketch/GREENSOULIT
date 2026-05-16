@@ -13,11 +13,13 @@ const VideoSection: React.FC = () => {
             <div className="overflow-hidden rounded-xl shadow-2xl border-gray-50">
               <video
                 className="w-full"
-                controls
+                autoPlay
                 muted
                 loop
                 playsInline
+                controls
               >
+                <source src="https://res.cloudinary.com/dqvdj8rq6/video/upload/f_auto,q_auto/greebsoul_bvctkm.mp4" type="video/mp4" />
                 <source src="https://res.cloudinary.com/dqvdj8rq6/video/upload/v1772610416/greebsoul_bvctkm.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
