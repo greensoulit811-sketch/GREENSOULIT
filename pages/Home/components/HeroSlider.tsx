@@ -121,9 +121,9 @@ const HeroSlider: React.FC = () => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-1.5 w-1.5 sm:h-2 sm:w-2 bg-green-500"></span>
                 </span>
-                <span className="text-green-400 font-black text-[8px] sm:text-sm uppercase tracking-widest">New Release</span>
+                <span className="text-green-400 font-black text-[10px] sm:text-sm uppercase tracking-widest">New Release</span>
                 <div className="w-px h-3 bg-white/20"></div>
-                <span className="truncate max-w-[150px] sm:max-w-none">Explore {slide.title.split(' ')[0]} solutions</span>
+                <span className="truncate max-w-[200px] sm:max-w-none">Explore {slide.title.split(' ')[0]} solutions</span>
                 <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 text-white/40" />
               </div>
 
