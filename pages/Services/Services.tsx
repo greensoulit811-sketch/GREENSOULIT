@@ -229,7 +229,7 @@ const Services: React.FC = () => {
                  <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                    <Link 
                      to="/contact" 
-                     className="w-full sm:w-auto bg-green-500 text-white px-6 py-4 rounded-[1.5rem] font-black text-lg hover:bg-green-400 transition-all hover:scale-105 shadow-[0_20px_50px_rgba(34,197,94,0.3)] active:scale-95"
+                     className="w-full sm:w-auto bg-green-500 text-white px-4 py-4 rounded-[1.5rem] font-black text-lg hover:bg-green-400 transition-all hover:scale-105 shadow-[0_20px_50px_rgba(34,197,94,0.3)] active:scale-95"
                    >
                      Get a Free Strategy Call
                    </Link>
