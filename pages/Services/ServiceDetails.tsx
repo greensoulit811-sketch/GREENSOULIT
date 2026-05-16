@@ -410,11 +410,11 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ activeService }) => {
                    Our experts are standing by to help you scale.
                  </p>
                  <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
-                   <Link to="/contact" className="group w-full sm:w-auto bg-green-500 text-white px-12 py-4  rounded-xl font-black text-xl hover:bg-green-400 transition-all hover:scale-105 shadow-[0_20px_60px_rgba(34,197,94,0.3)] active:scale-95 flex items-center gap-3">
+                   <Link to="/contact" className="group w-full sm:w-auto bg-green-500 text-white px-4 py-4  rounded-xl font-black text-xl hover:bg-green-400 transition-all hover:scale-105 shadow-[0_20px_60px_rgba(34,197,94,0.3)] active:scale-95 flex items-center gap-3">
                      Get Free Consultation
                      <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
                    </Link>
-                   <Link to="/services" className="w-full sm:w-auto bg-white/5 border border-white/10 text-white px-12 py-4 rounded-xl font-black text-xl hover:bg-white/10 transition-all">
+                   <Link to="/services" className="w-full sm:w-auto bg-white/5 border border-white/10 text-white px-4 py-4 rounded-xl font-black text-xl hover:bg-white/10 transition-all">
                      View More Solutions
                    </Link>
                  </div>
