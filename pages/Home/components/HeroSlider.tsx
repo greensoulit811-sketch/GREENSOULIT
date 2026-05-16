@@ -116,7 +116,7 @@ const HeroSlider: React.FC = () => {
               }`}
             >
               {/* Announcement Badge */}
-              <div className={`inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-white/80 text-[9px] sm:text-sm font-bold mb-14 sm:mb-10 shadow-sm whitespace-nowrap transition-all duration-700 delay-100 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
+              <div className={`inline-flex items-center gap-1.5 sm:gap-2 px-8 sm:px-5 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-white/80 text-[9px] sm:text-sm font-bold mb-14 sm:mb-10 shadow-sm whitespace-nowrap transition-all duration-700 delay-100 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
                 <span className="relative flex h-1.5 w-1.5 sm:h-2 sm:w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-1.5 w-1.5 sm:h-2 sm:w-2 bg-green-500"></span>
