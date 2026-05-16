@@ -212,7 +212,7 @@ const Services: React.FC = () => {
       </section>
 
       {/* Cinematic CTA Section */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
            <div className="bg-[#030712] rounded-[1.5rem] p-16 md:p-16 text-center relative overflow-hidden group shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)]">
               {/* Background Glows */}
@@ -220,7 +220,7 @@ const Services: React.FC = () => {
               <div className="absolute bottom-0 left-0 w-[200px] h-[200px] bg-emerald-500/5 rounded-full blur-[120px] -ml-40 -mb-40"></div>
               
               <div className="relative z-10">
-                 <h2 className="text-5xl md:text-7xl font-black text-white mb-12 leading-[1.05] tracking-tight">
+                 <h2 className="text-2xl md:text-7xl font-black text-white mb-12 leading-[1.05] tracking-tight">
                    Let's build your <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">Digital Empire.</span>
                  </h2>
                  <p className="text-gray-400 text-xl md:text-2xl mb-16 max-w-2xl mx-auto font-medium">
@@ -229,7 +229,7 @@ const Services: React.FC = () => {
                  <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                    <Link 
                      to="/contact" 
-                     className="w-full sm:w-auto bg-green-500 text-white px-16 py-6 rounded-[2rem] font-black text-lg hover:bg-green-400 transition-all hover:scale-105 shadow-[0_20px_50px_rgba(34,197,94,0.3)] active:scale-95"
+                     className="w-full sm:w-auto bg-green-500 text-white px-6 py-4 rounded-[1.5rem] font-black text-lg hover:bg-green-400 transition-all hover:scale-105 shadow-[0_20px_50px_rgba(34,197,94,0.3)] active:scale-95"
                    >
                      Get a Free Strategy Call
                    </Link>
