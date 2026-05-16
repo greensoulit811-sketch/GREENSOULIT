@@ -116,19 +116,19 @@ const HeroSlider: React.FC = () => {
               }`}
             >
               {/* Announcement Badge */}
-              <div className={`inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-white/80 text-sm font-bold mb-10 shadow-sm transition-all duration-700 delay-100 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-                <span className="relative flex h-2 w-2">
+              <div className={`inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-white/80 text-[9px] sm:text-sm font-bold mb-14 sm:mb-10 shadow-sm whitespace-nowrap transition-all duration-700 delay-100 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
+                <span className="relative flex h-1.5 w-1.5 sm:h-2 sm:w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 sm:h-2 sm:w-2 bg-green-500"></span>
                 </span>
-                <span className="text-green-400 font-black text-[10px] lg:text-sm uppercase tracking-widest">New Release</span>
+                <span className="text-green-400 font-black text-[8px] sm:text-sm uppercase tracking-widest">New Release</span>
                 <div className="w-px h-3 bg-white/20"></div>
-                Explore {slide.title.split(' ')[0]} solutions
-                <ChevronRight className="w-4 h-4 text-white/40" />
+                <span className="truncate max-w-[150px] sm:max-w-none">Explore {slide.title.split(' ')[0]} solutions</span>
+                <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 text-white/40" />
               </div>
 
               {/* Title with Perspective and Split Color */}
-              <h2 className={`text-3xl sm:text-7xl lg:text-7xl font-black text-white mb-8 leading-[1.05] tracking-tighter max-w-6xl mx-auto transition-all duration-1000 delay-300 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+              <h2 className={`text-3xl sm:text-7xl lg:text-7xl font-black text-white mb-10 sm:mb-8 leading-[1.2] sm:leading-[1.05] tracking-tighter max-w-6xl mx-auto transition-all duration-1000 delay-300 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
                 {slide.title.split(' ').map((word, i) => (
                   <span key={i} className={(word === '&' || i === 2 || i === 3) ? "text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-300" : ""}>{word} </span>
                 ))}
