@@ -176,7 +176,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ activeService }) => {
     <div className="bg-white min-h-screen text-gray-900 font-sans selection:bg-green-100 selection:text-green-900">
       
       {/* --- PREMIUM HERO SECTION --- */}
-      <section className="relative pt-24 pb-24 overflow-hidden">
+      <section className="relative pt-16 pb-16 overflow-hidden">
         {/* Animated Background Layers */}
         <div className="absolute inset-0 z-0">
            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-green-500/5 rounded-full blur-[140px] animate-pulse"></div>
@@ -187,7 +187,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ activeService }) => {
         <div className="container mx-auto px-4 relative z-10 text-center">
           <Link 
             to="/services" 
-            className="inline-flex items-center gap-2 text-green-600 text-xs font-black uppercase tracking-[0.3em] mb-12 hover:gap-4 transition-all group px-6 py-2 rounded-full border border-green-100 hover:bg-green-50"
+            className="inline-flex items-center gap-2 text-green-600 text-xs font-black uppercase tracking-[0.3em] mb-6 hover:gap-4 transition-all group px-6 py-2 rounded-full border border-green-100 hover:bg-green-50"
           >
              <ChevronRight className="w-4 h-4 rotate-180" /> Back to Solutions
           </Link>
@@ -197,7 +197,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ activeService }) => {
              {activeService.category || "Premium Solution"}
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-black mb-10 leading-[1.02] tracking-tighter text-gray-900 animate-in fade-in slide-in-from-bottom-8 duration-1000">
+          <h1 className="text-2xl md:text-6xl font-black mb-10 leading-[1.02] tracking-tighter text-gray-900 animate-in fade-in slide-in-from-bottom-8 duration-1000">
             {activeService.title}
           </h1>
           <p className="text-gray-500 text-xl md:text-xl max-w-4xl mx-auto font-medium leading-relaxed mb-16 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-150">
@@ -213,13 +213,13 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ activeService }) => {
       </section>
 
       {/* --- CORE STRATEGY SECTION --- */}
-      <section className="py-24 bg-[#030712] text-white relative overflow-hidden">
+      <section className="py-14 bg-[#030712] text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-green-500/10 rounded-full blur-[150px] -mr-48 -mt-48"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-[150px] -ml-48 -mb-48"></div>
         
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-            <div className="group bg-white/5 border border-white/10 p-12 rounded-[1.5rem] hover:bg-white/10 transition-all duration-700">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="group bg-white/5 border border-white/10 lg:p-12 p-4 rounded-[1.5rem] hover:bg-white/10 transition-all duration-700">
               <div className="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-green-500 group-hover:rotate-6 transition-all duration-500 shadow-lg">
                 <Target className="w-8 h-8 text-green-400 group-hover:text-white" />
               </div>
@@ -227,7 +227,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ activeService }) => {
               <p className="text-gray-400 leading-relaxed font-medium text-lg">{customContent.importance}</p>
             </div>
 
-            <div className="group bg-white/5 border border-white/10 p-12 rounded-[1.5rem] hover:bg-white/10 transition-all duration-700">
+            <div className="group bg-white/5 border border-white/10 lg:p-12 p-4 rounded-[1.5rem] hover:bg-white/10 transition-all duration-700">
               <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-emerald-500 group-hover:-rotate-6 transition-all duration-500 shadow-lg">
                 <Layers className="w-8 h-8 text-emerald-400 group-hover:text-white" />
               </div>
@@ -235,7 +235,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ activeService }) => {
               <p className="text-gray-400 leading-relaxed font-medium text-lg">{customContent.scope}</p>
             </div>
 
-            <div className="group bg-white/5 border border-white/10 p-12 rounded-[1.5rem] hover:bg-white/10 transition-all duration-700">
+            <div className="group bg-white/5 border border-white/10 lg:p-12 p-4 rounded-[1.5rem] hover:bg-white/10 transition-all duration-700">
               <div className="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-green-500 group-hover:scale-110 transition-all duration-500 shadow-lg">
                 <Zap className="w-8 h-8 text-green-400 group-hover:text-white" />
               </div>
@@ -247,13 +247,13 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ activeService }) => {
       </section>
 
       {/* --- BENEFITS & FEATURES --- */}
-      <section className="py-24 relative bg-gray-50/50">
+      <section className="py-14 relative bg-gray-50/50">
         <div className="container mx-auto px-4">
           {activeService.slug === 'website-design' ? (
             /* Special Full-Width Layout for Website Design */
             <div className="space-y-20">
               <div className="w-full">
-                <h2 className="text-5xl md:text-6xl lg:text-5xl font-black text-gray-900 mb-8 leading-tight">
+                <h2 className="text-2xl md:text-6xl lg:text-5xl font-black text-gray-900 mb-8 leading-tight">
                   Why Choose Our <br />
                   <span className="text-green-600">Expert Approach?</span>
                 </h2>
@@ -261,7 +261,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ activeService }) => {
                   We don't just deliver a service; we build a foundation for your digital success. 
                   Our team combines years of industry expertise with the latest market trends.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {customContent.benefits.map((benefit, i) => (
                     <div key={i} className="flex items-center gap-4 group">
                       <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 group-hover:bg-green-600 group-hover:text-white transition-all duration-300">
@@ -273,11 +273,11 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ activeService }) => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {customContent.features.map((feature, i) => {
                   const Icon = feature.icon;
                   return (
-                    <div key={i} className="bg-white p-10 rounded-[1.5rem] border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 flex flex-col items-start gap-8 group">
+                    <div key={i} className="bg-white p-4 lg:p-10 rounded-[1.5rem] border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 flex flex-col items-start gap-8 group">
                       <div className="w-16 h-16 rounded-2xl bg-gray-50 flex items-center justify-center flex-shrink-0 group-hover:bg-green-50 transition-colors">
                         <Icon className="w-8 h-8 text-green-600" />
                       </div>
@@ -341,12 +341,12 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ activeService }) => {
       </section>
 
       {/* --- CINEMATIC WORKFLOW --- */}
-      <section className="py-24 bg-white relative">
+      <section className="py-14 bg-white relative">
         <div className="container mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-100 text-gray-500 text-[10px] font-black uppercase tracking-[0.3em] mb-8">
              Our Success Blueprint
           </div>
-          <h2 className="text-5xl md:text-6xl lg:text-5xl font-black mb-8 text-gray-900 tracking-tight">The <span className="text-green-600">Roadmap</span> to Results</h2>
+          <h2 className="text-2xl md:text-6xl lg:text-5xl font-black mb-8 text-gray-900 tracking-tight">The <span className="text-green-600">Roadmap</span> to Results</h2>
           <p className="text-gray-500 text-xl font-medium mb-24 max-w-2xl mx-auto">A transparent, step-by-step methodology designed for your business growth.</p>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -370,9 +370,9 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ activeService }) => {
 
       {/* --- RELATED SERVICES --- */}
       {relatedServices.length > 0 && (
-        <section className="py-24 bg-gray-50/30">
+        <section className="py-14 bg-gray-50/30">
           <div className="container mx-auto px-4">
-            <h3 className="text-5xl md:text-6xl text-center lg:text-5xl font-black mb-12 text-gray-900">Explore Other <span className="text-green-600">Solutions</span></h3>
+            <h3 className="text-2xl md:text-6xl text-center lg:text-5xl font-black mb-12 text-gray-900">Explore Other <span className="text-green-600">Solutions</span></h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {relatedServices.map((service) => (
                 <Link 
@@ -401,7 +401,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ activeService }) => {
               <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-500/5 rounded-full blur-[120px] -ml-40 -mb-40"></div>
               
               <div className="relative z-10 text-white">
-                 <h2 className="text-5xl md:text-7xl font-black mb-10 leading-[1.05] tracking-tight">
+                 <h2 className="text-2xl md:text-7xl font-black mb-10 leading-[1.05] tracking-tight">
                    Let's Build Your
                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600"> Digital Dynasty.</span>
                  </h2>
@@ -410,11 +410,11 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ activeService }) => {
                    Our experts are standing by to help you scale.
                  </p>
                  <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
-                   <Link to="/contact" className="group w-full sm:w-auto bg-green-500 text-white px-12 py-6 rounded-xl font-black text-xl hover:bg-green-400 transition-all hover:scale-105 shadow-[0_20px_60px_rgba(34,197,94,0.3)] active:scale-95 flex items-center gap-3">
+                   <Link to="/contact" className="group w-full sm:w-auto bg-green-500 text-white px-12 py-4  rounded-xl font-black text-xl hover:bg-green-400 transition-all hover:scale-105 shadow-[0_20px_60px_rgba(34,197,94,0.3)] active:scale-95 flex items-center gap-3">
                      Get Free Consultation
                      <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
                    </Link>
-                   <Link to="/services" className="w-full sm:w-auto bg-white/5 border border-white/10 text-white px-12 py-6 rounded-xl font-black text-xl hover:bg-white/10 transition-all">
+                   <Link to="/services" className="w-full sm:w-auto bg-white/5 border border-white/10 text-white px-12 py-4 rounded-xl font-black text-xl hover:bg-white/10 transition-all">
                      View More Solutions
                    </Link>
                  </div>
