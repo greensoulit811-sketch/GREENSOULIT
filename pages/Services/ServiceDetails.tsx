@@ -176,7 +176,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ activeService }) => {
     <div className="bg-white min-h-screen text-gray-900 font-sans selection:bg-green-100 selection:text-green-900">
       
       {/* --- PREMIUM HERO SECTION --- */}
-      <section className="relative pt-16 pb-16 overflow-hidden">
+      <section className="relative pt-12 pb-16 overflow-hidden">
         {/* Animated Background Layers */}
         <div className="absolute inset-0 z-0">
            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-green-500/5 rounded-full blur-[140px] animate-pulse"></div>
@@ -200,7 +200,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ activeService }) => {
           <h1 className="text-2xl md:text-6xl font-black mb-10 leading-[1.02] tracking-tighter text-gray-900 animate-in fade-in slide-in-from-bottom-8 duration-1000">
             {activeService.title}
           </h1>
-          <p className="text-gray-500 text-xl md:text-xl max-w-4xl mx-auto font-medium leading-relaxed mb-16 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-150">
+          <p className="text-gray-500 md:text-xl max-w-4xl mx-auto font-medium leading-relaxed mb-16 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-150">
             {activeService.description}
           </p>
 
