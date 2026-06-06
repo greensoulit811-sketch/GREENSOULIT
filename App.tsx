@@ -10,6 +10,7 @@ import Services from './pages/Services/Services';
 import CaseStudies from './pages/CaseStudies/CaseStudies';
 import BlogPage from './pages/Blog/Blog.tsx';
 import Contact from './pages/Contact/Contact';
+import Customers from './pages/customers/Customers';
 
 
 import Invoice from './pages/Invoice/Invoice';
@@ -41,6 +42,7 @@ const App: React.FC = () => {
             <Route path="/services" element={<Services />} />
             <Route path="/services/:slug" element={<Services />} />
             <Route path="/invoice" element={<Invoice />}/>
+            <Route path="/our-customers" element={<Customers />} />
 
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/blog" element={<BlogPage />} />

@@ -84,7 +84,7 @@ const Navbar: React.FC = () => {
           </Link>
 
           {/* Desktop Menu - Links (Center) */}
-          <div className="hidden md:flex flex-grow justify-center items-center space-x-10">
+          <div className="hidden md:flex flex-grow justify-center items-center space-x-8">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/about">About</NavLink>
 
@@ -122,6 +122,7 @@ const Navbar: React.FC = () => {
             </div>
 
             <NavLink to="/case-studies">Casestudies</NavLink>
+            <NavLink to="/our-customers">Our customers</NavLink>
             <NavLink to="/invoice">Payment</NavLink>
             <NavLink to="/contact">Contact</NavLink>
           </div>
