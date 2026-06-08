@@ -114,7 +114,7 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ services }) => {
                     {/* Tiny Accent Bar */}
                     <div className={`w-12 h-1.5 ${style.accent} rounded-full mb-8 transform origin-left group-hover:scale-x-150 transition-transform duration-700`}></div>
                     
-                    <h3 className={`${isWide ? 'text-2xl md:text-5xl' : 'text-xl'} font-black mb-6 leading-[1.1] text-gray-900 tracking-tight ${isWide ? 'max-w-2xl' : ''}`}>
+                    <h3 className={`text-xl md:text-2xl font-black mb-6 leading-[1.1] text-gray-900 tracking-tight ${isWide ? 'max-w-2xl' : ''}`}>
                       {renderTitle(service.title, index)}
                     </h3>
                     
