@@ -98,27 +98,27 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ services }) => {
             return (
               <div 
                 key={service.id}
-                className={`${colSpan} min-h-[40px] ${style.bg} rounded-[1.5rem] p-6 md:p-14 relative group overflow-hidden transition-all duration-700 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] ${style.hover} border border-white/50 flex flex-col justify-between`}
+                className={`${colSpan} min-h-[40px] ${style.bg} rounded-[1.5rem] p-6 md:p-14 relative group overflow-hidden transition-all duration-700 hover:shadow-[0_30px_40px_-20px_rgba(0,0,0,0.1)] flex flex-col justify-between`}
               >
                 {/* Decorative Background Elements */}
                 <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-white/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                <div className={`absolute top-[-10%] left-[-10%] w-96 h-96 bg-gradient-radial ${style.glow} blur-[100px] -z-0 opacity-30 group-hover:opacity-60 transition-opacity duration-700`}></div>
+                <div className={`absolute top-[-10%] left-[-10%] w-96 h-96 bg-gradient-radial ${style.glow} blur-[100px] -z-0 opacity-30 transition-opacity duration-700`}></div>
                 
                 {/* Card Numbering */}
                 <span className="absolute top-10 right-10 text-8xl font-black text-black/[0.03] select-none group-hover:text-black/[0.05] transition-colors duration-700">
                   0{index + 1}
                 </span>
 
-                <div className={`h-full flex flex-col ${isWide ? 'md:flex-row md:items-center' : ''} relative z-10`}>
-                  <div className={isWide ? 'flex-1 pr-12' : ''}>
+                <div className="h-full flex flex-col relative z-10 justify-center">
+                  <div className={isWide ? 'md:pr-12' : ''}>
                     {/* Tiny Accent Bar */}
                     <div className={`w-12 h-1.5 ${style.accent} rounded-full mb-8 transform origin-left group-hover:scale-x-150 transition-transform duration-700`}></div>
                     
-                    <h3 className={`${isWide ? 'text-xl md:text-5xl' : 'text-xl'} font-black mb-6 leading-[1.1] text-gray-900 tracking-tight`}>
+                    <h3 className={`${isWide ? 'text-2xl md:text-5xl' : 'text-xl'} font-black mb-6 leading-[1.1] text-gray-900 tracking-tight ${isWide ? 'max-w-2xl' : ''}`}>
                       {renderTitle(service.title, index)}
                     </h3>
                     
-                    <p className="text-gray-500 font-medium mb-10 max-w-xs leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity line-clamp-4">
+                    <p className={`text-gray-500 font-medium mb-10 ${isWide ? 'max-w-3xl' : 'max-w-xs'} leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity line-clamp-4`}>
                       {service.description}
                     </p>
                     
@@ -135,9 +135,6 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ services }) => {
                       </div>
                     </Link>
                   </div>
-                  
-                  {/* Space for removed icon/image */}
-                  {isWide && <div className="flex-1"></div>}
                 </div>
               </div>
             );
