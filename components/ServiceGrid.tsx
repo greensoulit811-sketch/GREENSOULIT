@@ -103,7 +103,7 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ services }) => {
                 {/* Decorative Background Elements */}
                 <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-white/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 <div className={`absolute top-[-10%] left-[-10%] w-96 h-96 bg-gradient-radial ${style.glow} blur-[100px] -z-0 opacity-30 transition-opacity duration-700`}></div>
-                
+                 
                 {/* Card Numbering */}
                 <span className="absolute top-10 right-10 text-8xl font-black text-black/[0.03] select-none group-hover:text-black/[0.05] transition-colors duration-700">
                   0{index + 1}
