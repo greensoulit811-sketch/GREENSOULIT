@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `radial-gradient(#22c55e 1px, transparent 1px)`, backgroundSize: '40px 40px' }}></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <h1 className="text-4xl md:text-6xl lg:text-5xl font-black text-white mb-6 leading-[1.1] tracking-tight animate-in fade-in slide-in-from-bottom-4 duration-1000">
+          <h1 className="text-3xl sm:text-7xl lg:text-7xl font-black text-white mb-6 leading-[1.2] sm:leading-[1.05] tracking-tighter animate-in fade-in slide-in-from-bottom-4 duration-1000">
             Get in
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500 ml-3">
               Touch.
@@ -154,8 +154,8 @@ const Contact: React.FC = () => {
                   },
                   {
                     icon: Globe,
-                    title: "Social Media",
-                    content: "@greensoulit",
+                    title: "Website",
+                    content: "www.greensoulit.com",
                     color: "text-green-600",
                     bg: "bg-green-500/10",
                     border: "group-hover:border-green-200",

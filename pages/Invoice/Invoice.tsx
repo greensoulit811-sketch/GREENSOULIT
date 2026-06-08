@@ -140,7 +140,7 @@ const PaymentInvoice: React.FC = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-xs font-black uppercase tracking-[0.2em] mb-6">
             <ShieldCheck className="w-4 h-4" /> Secure Payment
           </div>
-          <h1 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight tracking-tight">
+          <h1 className="text-3xl sm:text-7xl lg:text-7xl font-black text-white mb-6 leading-[1.2] sm:leading-[1.05] tracking-tighter">
             Safe & Easy <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">Checkout.</span>
           </h1>

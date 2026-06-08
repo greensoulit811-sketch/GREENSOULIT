@@ -122,21 +122,23 @@ const Navbar: React.FC = () => {
             </div>
 
             <NavLink to="/case-studies">Casestudies</NavLink>
-            <NavLink to="/our-customers">Our customers</NavLink>
+            <NavLink to="/our-customers">Customers</NavLink>
             <NavLink to="/invoice">Payment</NavLink>
             <NavLink to="/contact">Contact</NavLink>
           </div>
 
           {/* Desktop Menu - Button (Right Side) */}
           <div className="hidden md:flex items-center">
-            <Link 
-              to="/contact" 
-              className="relative inline-block p-0.5 rounded-full overflow-hidden hover:scale-105 transition duration-300 active:scale-100 button-wrapper"
+            <a 
+              href="https://wa.me/+8801607183592" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative inline-block p-0.5 rounded-md overflow-hidden hover:scale-105 transition duration-300"
             >
-              <button className="relative z-10 bg-gray-900  text-green-600 rounded-full px-10 py-3 font-medium text-lg">
-                Hire Us
+              <button className="relative z-10 bg-green-700 border border-green-600  text-white rounded-lg px-6 py-2 font-medium text-lg">
+                Contact Us
               </button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -228,13 +230,15 @@ const Navbar: React.FC = () => {
 
           {/* Bottom Action Section */}
           <div className="pt-4 border-t border-gray-100">
-            <Link 
-              to="/contact" 
+            <a 
+              href="https://wa.me/8801701635619"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setIsOpen(false)}
               className="block w-full bg-gray-950 text-white text-center py-4 rounded-2xl font-black text-sm shadow-xl transition-all active:scale-[0.98]"
             >
               Start Your Project
-            </Link>
+            </a>
           </div>
 
         </div>

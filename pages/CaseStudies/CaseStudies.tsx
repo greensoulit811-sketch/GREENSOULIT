@@ -49,7 +49,7 @@ const CaseStudies: React.FC = () => {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-green-500 text-[10px] font-black uppercase tracking-[0.3em] mb-8 animate-in fade-in slide-in-from-top-4 duration-1000">
              Our Success Stories
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-5xl font-black text-white mb-8 leading-[1.1] tracking-tight animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-100">
+          <h1 className="text-3xl sm:text-7xl lg:text-7xl font-black text-white mb-8 leading-[1.2] sm:leading-[1.05] tracking-tighter animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-100">
             Real Impact, 
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500 ml-3">
                Proven Results.

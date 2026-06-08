@@ -197,7 +197,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ activeService }) => {
              {activeService.category || "Premium Solution"}
           </div>
           
-          <h1 className="text-2xl md:text-6xl font-black mb-10 leading-[1.02] tracking-tighter text-gray-900 animate-in fade-in slide-in-from-bottom-8 duration-1000">
+          <h1 className="text-3xl sm:text-7xl lg:text-7xl font-black mb-10 leading-[1.2] sm:leading-[1.05] tracking-tighter text-gray-900 animate-in fade-in slide-in-from-bottom-8 duration-1000">
             {activeService.title}
           </h1>
           <p className="text-gray-500 text-[14px] md:text-xl max-w-4xl mx-auto font-medium leading-relaxed mb-10 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-150">
